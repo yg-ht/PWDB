@@ -1,0 +1,12 @@
+- Turn back on cracking runs that take a while and were disabled for testing purposes
+- Write the analysis script
+- Write the graphic drawing script
+- domain admins upload may not be working
+- new views - numadminswithcrackednt, listadminswithverypoorpasswords and listliveadminswithverypoorpasswords
+- new analysis - need to know number of cracked passwords with symbols
+- does not run rockyou with d3ad0ne
+- Delete old DB exports prior to downloading a new one
+- Demark the different sections of the script
+- Dictionary of ALL previously cracked
+- psql pwdb -c "\COPY currentclientliveusers FROM 'BLAH.liveusers'"
+- need to include checks for live users with blank passwords
