@@ -1,6 +1,6 @@
 =========================--- PWDB Scripts ---===========================
 Automated LM and NTLM hash cracking scripts, database management and 
-cracked password analysis including pretty graph drawing!
+cracked password analysis
 
 Written by Felix Ryan
 
@@ -11,13 +11,12 @@ Motivation:
 
 Basically, cracking hashes and performing analysis on those that you cracked is a common 
 task in a pen-testers day to day life.  It doesn't half seem to take up a lot of time 
-though given, how straight forward the process should be once developed.  This meant I 
+though given how straight forward the process should be once developed.  This meant I 
 had standardised the commands I used on a regular basis to make it more efficient.  We 
-then got a cracking box to share between the consultants and it was obvious even before 
+then got a new cracking box to share between the consultants and it was obvious even before 
 this was launched that we were going to need a standard way of working with it and 
-sharing the resource.  This set of scripts, known collectively as the PWDB scripts, aim 
-to automate the process as much as possible to allow multiple users to make the best 
-use of the technology.
+sharing the resource.  This set of scripts aim to automate the process as much as possible
+to allow multiple users to make the best use of the technology.
 
 Usage:
 ======
@@ -42,3 +41,10 @@ The files should be named as follows:
 PWDUMP :			[CLIENT NAME].pwdump
 Domain Enumeration file :	[CLIENT NAME].domainenum
 Live users file :		[CLIENT NAME].liveusers
+
+Installation:
+=============
+
+You will need PostgreSQL installed.
+Import the SQL in sundries/pwdb.sql.
+
