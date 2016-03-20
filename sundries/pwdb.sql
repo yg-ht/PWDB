@@ -649,6 +649,31 @@ CREATE VIEW passwordlengthanalysislive AS
 
 ALTER TABLE public.passwordlengthanalysislive OWNER TO root;
 
+--
+-- Name: listlivetoppasswords; Type: VIEW; Schema: public; Owner: root
+--
+
+CREATE VIEW listlivetoppasswords AS
+ SELECT plain, count(plain) AS usagecount
+ FROM currentclient,
+ crackednt,
+ currentclientliveusers
+ WHERE currentclient.cryptont = crackednt.cryptont AND currentclient.username =
+currentclientliveusers.username
+GROUP BY plain
+ORDER BY usagecount DESC;
+
+--
+-- Name: listtoppasswords; Type: VIEW; Schema: public; Owner: root
+--
+
+CREATE VIEW listtoppasswords AS
+ SELECT plain, count(plain) AS usagecount
+ FROM currentclient,
+ crackednt
+ WHERE currentclient.cryptont = crackednt.cryptont
+ GROUP BY plain
+ ORDER BY usagecount DESC;
 
 --
 -- Data for Name: crackednt; Type: TABLE DATA; Schema: public; Owner: root
